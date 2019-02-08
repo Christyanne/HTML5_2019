@@ -12,7 +12,33 @@ Multiline comment
 //confirm("Do you like pokemon?");
 
 // ("What type of pokemon do you like?");
+var inventory = {
+        books: {
+            diary: 0,
+            guide: 0,
+            
+        }, 
+        Keys: {
+            tardis: 0,
+            
+        },
+        Food: {
+            MiniMarshmallows: 0,
+            MiniGummyBears: 0,
+        },
+        Backpack: {
+            Map: 0,
+            WaterBottle: 0,
+            Pillow: 0,
+        }
+    
+    
+}
+function GetRaidInt(max) {
+            var randInt = Math.floor(Math.random() * Math.floor(max));
+            return randInt;
 
+//Start Game
 Game();
 
 function Game() {
@@ -42,7 +68,7 @@ function Game() {
         }
         
         function CrystalCave() {
-            var crystalcaveEnv = promt("Rock cave walls with purple crystals illuminating the room. At the West of the room there is a pool. It reflecks and glitters of the purple light crystals. /n - swin in pool /n - look around /n - throw rock ");
+            var crystalcaveEnv = promt("Rock cave walls with purple crystals illuminating the room. At the West of the room there is a pool. It reflecks and glitters of the purple light crystals. /n - swim in pool /n - look around /n - throw rock ");
             
            
             if(crystalcaveEnv == "swim in pool" || "swim") {
@@ -71,5 +97,4 @@ function Game() {
                 alert("I don't understand"+crystalcaveEnv);
                 CrystalCave();
             }
-        }
-    }
+}
