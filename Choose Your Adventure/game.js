@@ -12,7 +12,21 @@ Multiline comment
 //confirm("Do you like pokemon?");
 
 // ("What type of pokemon do you like?");
-var inventory = {
+
+//Check coin expression
+var checkCoins = function () {
+    alert("Pink Coins:" + player.inventory.coins.pink + "/ -n Purple Coins: ");
+    (+player.inventory.coins.purple + "/ -n Blue Coins: " + player.inventory.coins.blue);
+}
+
+var player = {
+    health: 100,
+    inventory: {
+        coins: {
+            pink: 0,
+            purple: 0,
+            blue: 0
+        },
         books: {
             diary: 0,
             guide: 0
@@ -30,6 +44,7 @@ var inventory = {
             pillow: 0
         }
     };
+    
 function GetRandInt(max) {
     var randInt = Math.floor(Math.random() * Math.floor(max));
     return randInt;
@@ -38,7 +53,7 @@ function GetRandInt(max) {
     Game();
 
     function Game() {
-        var legendNames = ["Oria", "Iridia", "Cartan", "Rixen"]
+        var legendNames = ["Oria", "Iridia", "Cartan", "Rixen"];
         document.write("Legends of" + legendNames[Math.floor(Math.random() * 4)] + "!");
         var playerName = prompt("What is your name?");
         alert("Welcome to the land of Drust " + playerName);
@@ -74,7 +89,7 @@ function GetRandInt(max) {
                         alert("You get out and your are dripping wet because you didn't take off your close.");
                     }
                 }
-                else if (crystalcaveEnv === "throw rock" || "throw") {
+                    else if (crystalcaveEnv === "throw rock" || "throw") {
                     alert("You throw rock into pool but it doesn't wripple. As soon as its done hopping is sinks to an unknown bottom.");
                 }   
                 if (crystalcaveEnv === "look around" || "look") {
@@ -85,11 +100,11 @@ function GetRandInt(max) {
                         CrystalCave();
                     }
                 switch (new Area().getArea()) {
-                case MainRoom :
+                case MainRoom:
                     area = "MainRoom"
                     break;
-                case CrystalCaves :
-                    area = "CrystalCaves"
+                case CrystalCave:
+                    area = "CrystalCave"
                     break;
                 }
-            }
+}
