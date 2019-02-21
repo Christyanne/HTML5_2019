@@ -13,12 +13,6 @@ Multiline comment
 
 // ("What type of pokemon do you like?");
 
-//Check coin expression
-var checkCoins = function () {
-    alert("Pink Coins:" + player.inventory.coins.pink + "/ -n Purple Coins: ");
-    (+player.inventory.coins.purple + "/ -n Blue Coins: " + player.inventory.coins.blue);
-}
-
 var player = {
     health: 100,
     inventory: {
@@ -43,12 +37,16 @@ var player = {
             waterbottle: 0,
             pillow: 0
         }
-    };
-    
+    }
+}
 function GetRandInt(max) {
     var randInt = Math.floor(Math.random() * Math.floor(max));
     return randInt;
-
+//Check coin expression
+    var checkCoins = function (pink, purple, blue) {
+        alert("Pink Coins:" + player.inventory.coins.pink + "/ -n Purple Coins: ");
+        (+player.inventory.coins.purple + "/ -n Blue Coins: " + player.inventory.coins.blue);
+    }
 //Start Game
     Game();
 
@@ -85,7 +83,7 @@ function GetRandInt(max) {
 
                 if (crystalcaveEnv === "swim in pool" || "swim") {
                     var crystalWaters = prompt("You swim around the pool. And it strangly makes no ripples in the water. The crystals reflect off the surface of the water but you don't see you own reflection. It feels refreshing. You wonder when the last time you had a bath was. /n - get out");
-                    if (crystalcaveEnv = "get out") {
+                    if (crystalcaveEnv === "get out") {
                         alert("You get out and your are dripping wet because you didn't take off your close.");
                     }
                 }
@@ -94,17 +92,20 @@ function GetRandInt(max) {
                 }   
                 if (crystalcaveEnv === "look around" || "look") {
                     var crystalcaveEnv = prompt("You scan the room and see writing on the wall. It spells out Keepers of the Orians. A strange icky sensaton creeps up your spine like someones watching you. You glance around but see nothing there.");
-                }  
+                }
                     else {
                         alert("I don't understand" + crystalcaveEnv);
                         CrystalCave();
                     }
                 switch (new Area().getArea()) {
                 case MainRoom:
-                    area = "MainRoom"
+                    area = "MainRoom";
                     break;
                 case CrystalCave:
-                    area = "CrystalCave"
+                    area = "CrystalCave";
                     break;
                 }
+            }
+        }
+    }
 }
