@@ -19,7 +19,7 @@ var player = {
         coins: {
             pink: 0,
             purple: 0,
-            blue: 0
+            blue: 1,
         },
         books: {
             diary: 0,
@@ -54,15 +54,18 @@ function GetRandInt(max) {
         var legendNames = ["Oria", "Iridia", "Cartan", "Rixen"];
         document.write("Legends of" + legendNames[Math.floor(Math.random() * 4)] + "!");
         var playerName = prompt("What is your name?");
+        while(!confirm("Are you sure you want "+ playerName+" as a name?")){
+            playerName = prompt ("What name do you want?");
+        }
         alert("Welcome to the land of Drust " + playerName);
     
         MainRoom();
 
         function MainRoom() {
-            var mainroom = prompt("You wake up... Your head is pounding and your vision blurred. After pacing around walking off the headache your visions clears. It appears you are in an empty room and you can't remember why. /n - look around /n - go back to sleep").toLowerCase();
+            var MainRoom = prompt("You wake up... Your head is pounding and your vision blurred. After pacing around walking off the headache your visions clears. It appears you are in an empty room and you can't remember why. /n - look around /n - go back to sleep").toLowerCase();
 
             if (MainRoom === "look around" || MainRoom === "look") {
-                var mainroomLook = prompt("The room is small, dusty, drips of some substance seep into the room from the celing. There are two doors. One leading North and one leading South. The North door is locked but the rest seem open to explore. And on the floor is the only thing in the cementroom. A rug. It's visably moldy and smells terrible. /n - open south door /n - move rug");
+                var MainRoomLook = prompt("The room is small, dusty, drips of some substance seep into the room from the celing. There are two doors. One leading North and one leading South. The North door is locked but the rest seem open to explore. And on the floor is the only thing in the cementroom. A rug. It's visably moldy and smells terrible. /n - open south door /n - move rug");
             }  
                 else if (MainRoom === "go back to sleep" || MainRoom === "sleep") {
                 alert("You fall back to sleep on the moldy rug. You dream of distant lands and adventures of a distant but not entierly forgotten past.");
@@ -72,9 +75,12 @@ function GetRandInt(max) {
                     MainRoom();
                 }
                     else {
-                        alert("Game Over! You Failed! You Slept Into A Coma!");
+                        alert("Game Over! You Failed! You Slept Into A Coma! AKA a dedicated sleep. ");
 
                     }
+            else if(MainRoom == CrytalCave){
+                CrystalCave();
+            }
             }
 
             function CrystalCave() {
@@ -99,10 +105,10 @@ function GetRandInt(max) {
                     }
                 switch (new Area().getArea()) {
                 case MainRoom:
-                    area = "MainRoom";
+                    Area = "MainRoom";
                     break;
                 case CrystalCave:
-                    area = "CrystalCave";
+                    Area = "CrystalCave";
                     break;
                 }
             }
