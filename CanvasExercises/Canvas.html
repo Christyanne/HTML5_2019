@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+    
+<canvas id="myCanvas" width="180" height="100" style="border:1px dashed #000000; background-color:aqua"></canvas>
+    
+<script>
+    // Setup Canvas
+    var canvas =
+    document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    // Draw Rectangle
+    ctx.fillStyle = "#000000";
+    ctx.fillRect(70,25, 50, 50);
+    // Draw Line
+    ctx.moveTo(0,0);
+    ctx.lineTo(180,100);
+    ctx.stroke();
+    // Draw Cirlce Of Doom
+    ctx.beginPath();
+    ctx.arc(95,50,40,0,2 * Math.PI);
+    ctx.stroke();
+    // Create Gradiant
+    var grd = ctx.createLinearGradient(0,0,145,0);
+    grd.addColorStop(0,"fuchsia");
+    grd.addColorStop(1,"white");
+    // Fill With Gradient
+    ctx.fillStyle = grd;
+    ctx.fillRect(30,45,125,10);
+    //Create Radial Gradient
+    var grd = ctx.createRadialGradient(75,60,5,80,60,120);
+    grd.addColorStop(0,"fuchsia");
+    grd.addColorStop(1,"white");
+    // Fill With Gradient
+    ctx.fillStyle = grd;
+    ctx.fillRect(10,15,25,25);
+</script>
+    
+</body>
+</html>
