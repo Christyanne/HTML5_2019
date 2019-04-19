@@ -1,4 +1,10 @@
-/* Stylesheet for app*/
+/* Stylesheet for app
+font-family: 'Cookie', cursive;
+font-family: 'Cinzel Decorative', cursive;
+font-family: 'Sacramento', cursive;
+font-family: 'Bad Script', cursive;
+*/
+
 /* Reset */
 html,body,div,p,ul,ol,li,h1,h2,h3,h3,h5,h6
 {
@@ -25,8 +31,8 @@ header{
 
 header h1{
     color:blue;
-    font-family: "Tahoma",sans-serif;
-    font-size:3em;
+    font-family: 'Sacramento', cursive;
+    font-size:4em;
 }
 
 div#content{
@@ -39,4 +45,27 @@ nav{
     color:azure;
     font-family: fantasy;
     font-size: 1.5em;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    float:left;
+    padding:5px 15px;
+    border-right: 2px dotted white;
+}
+nav ul li a{
+    color:aqua;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    background-color: darkviolet;
+}
+footer{
+    width:100%;
+    height:50px;
+    background-color: aquamarine;
+}
+div.keepOpen{
+    clear: both;
 }
