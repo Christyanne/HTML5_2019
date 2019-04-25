@@ -17,8 +17,7 @@ body{
 }
 
 div#cotainer{
-    width:1200px;
-    height:800px;
+    width:100%;
     border:3px solid aqua;
     background-color:darkviolet;
 }
@@ -26,18 +25,18 @@ div#cotainer{
 header{
     width:91.5%;
     padding:50px;
-    background-color:chartreuse;
+    background-color:deeppink;
 }
 
 header h1{
-    color:blue;
+    color:darkmagenta;
     font-family: 'Sacramento', cursive;
     font-size:4em;
 }
 
 div#content{
     width:100%;
-    background-color: cadetblue;
+    background-color:aquamarine;
 }
 
 nav{
@@ -49,12 +48,11 @@ nav{
 nav ul{
     list-style: none;
 }
-nav ul li{
+nav ul li a{
     float:left;
+    display:block;
     padding:5px 15px;
     border-right: 2px dotted white;
-}
-nav ul li a{
     color:aqua;
     text-decoration: none;
 }
@@ -62,10 +60,22 @@ nav ul li a:hover{
     background-color: darkviolet;
 }
 footer{
+    position:absolute;
+    bottom:0;
+    left:0;
     width:100%;
     height:50px;
     background-color: aquamarine;
 }
 div.keepOpen{
     clear: both;
+}
+@media screen and (max-width: 600px){
+    div#container{
+        width:100%
+    }
+    nav ul li a{
+        float:none;
+        text-align:center;
+    }
 }
