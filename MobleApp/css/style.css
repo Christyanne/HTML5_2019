@@ -38,7 +38,7 @@ div#content{
     width:100%;
     background-color:aquamarine;
 }
-
+/*
 nav{
     background-color: darkmagenta;
     color:azure;
@@ -59,6 +59,31 @@ nav ul li a{
 nav ul li a:hover{
     background-color: darkviolet;
 }
+*/
+.icon-bar {
+    position:absolute;
+    bottom:0;
+    left:0;
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+}
+.icon-bar a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+.icon-bar a:hover {
+    background-color: #000;
+}
+.active {
+    background-color: #ffa20e;
+}
+/*
 footer{
     position:absolute;
     bottom:0;
@@ -79,3 +104,4 @@ div.keepOpen{
         text-align:center;
     }
 }
+*/
