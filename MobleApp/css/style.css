@@ -28,10 +28,16 @@ header{
     background-color:deeppink;
 }
 
+header img#applogo{
+    display:block;
+    margin:auto;
+    width:100px;
+}
 header h1{
     color:darkmagenta;
+    text-align:center;
     font-family: 'Sacramento', cursive;
-    font-size:4em;
+    font-size:4.5em;
 }
 
 div#content{
