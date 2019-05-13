@@ -118,6 +118,7 @@ div#product_grp{
 }
 
 figure.product{
+    float:left;
     width:20%;
     
 }
@@ -135,6 +136,26 @@ figure.product figcaption{
     font-size: 24px;
 }
 
+div.keepOpen{
+    clear:both;
+}
+
+@media screen (max-width: 600px) {
+    figure.product{
+        float:none;
+        margin:10px auto;
+        min-width:50%;
+        max-width:100%;
+        background-color: black;
+        border-radius:5%;
+    }
+    figure.product figcaption{
+    text-align: center;
+    color:white;
+    font-family: fantasy;
+    font-size: 12px;
+    }
+}
 
 
 
