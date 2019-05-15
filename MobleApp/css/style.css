@@ -125,7 +125,7 @@ figure.product{
 
 figure.product img{
     display:block;
-    width:auto;
+    width:100%;
     margin:auto;
 }
 
@@ -155,7 +155,16 @@ div.keepOpen{
     font-family: fantasy;
     font-size: 12px;
     }
+    
+    legend,span, input, textarea{
+        display:block;
+        margin:auto;
+        text-align: center;
+        font-family: sans-serif;
+        color: black;
+    }
 }
+
 
 
 
